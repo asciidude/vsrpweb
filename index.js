@@ -6,10 +6,13 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
+if(process.env.ENV != 'production') {
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 
 app.get('/', (req, res) => {
-    res.send('200');
+    res.render('index', { user: null });
 });
 
 app.get('/discord', (req, res) => res.redirect('https://discord.gg/XGxMuKXb9F'));

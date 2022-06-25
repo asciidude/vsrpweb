@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-weight: 300 !important;
+    font-family: 'Lexend Deca', sans-serif !important;
+}
+
+.top-1 {
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/img/background.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.fw-bold {
+    font-weight: 900 !important;
+}
