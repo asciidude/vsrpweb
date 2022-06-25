@@ -10,6 +10,6 @@ app.use('/', (req, res) => {
 });
 
 app.listen(
-    process.env.INSECURE_PORT,
-    () => process.stdout.write(`Listening on port ${process.env.INSECURE_PORT}\n`)
+    process.env.PORT,
+    () => process.stdout.write(`Listening on port ${process.env.PORT}\n`)
 );
