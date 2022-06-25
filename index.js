@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
-if(process.env.ENV = 'prod') {
+if(process.env.ENV === 'prod') {
     const fs = require('fs');
 
     const credentials = {
