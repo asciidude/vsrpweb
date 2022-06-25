@@ -1,9 +1,12 @@
 require('dotenv').config();
+
+const enforce = require('express-sslify');
 const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(enforce.HTTPS());
 
 app.get('/', (req, res) => {
     res.send('200');
