@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 
 app.get('/discord', (req, res) => res.redirect('https://discord.gg/XGxMuKXb9F'));
 
+app.get('*', (req, res) => {
+    res.render('404');
+});
+
 app.listen(
     process.env.PORT,
     () => process.stdout.write(`Listening on port ${process.env.PORT}\n`)
