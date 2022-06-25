@@ -29,7 +29,7 @@ app.use('/', (req, res) => {
 
 if(process.env.ENV == 'dev') {
     app.listen(
-        process.env.DEV_PORT,
-        () => process.stdout.write(`Listening on port ${process.env.DEV_PORT}\n`)
+        process.env.INSECURE_PORT,
+        () => process.stdout.write(`Listening on port ${process.env.INSECURE_PORT}\n`)
     );
 }
